@@ -97,7 +97,7 @@ void Read(
     // DecodeSciRaw(HexRawSciFileName.data(),ReadableRawSciFileNameT.data(),ReadableRawSciFileNameR.data(),NameRoot.data());
     system(Form("sleep 0 &&root -l -b -q DecodeSciRaw.C+\\(\\\"%s\\\",\\\"%s\\\",\\\"%s\\\",\\\"%s\\\"\\)",HexRawSciFileName.data(),ReadableRawSciFileNameT.data(),ReadableRawSciFileNameR.data(),NameRoot.data()));
     system(Form("sleep 0 &&root -l -b -q HLGScale.C+\\(\\\"%s\\\",\\\"%s\\\"\\)",dirAnaPath.data(),fileName.data()));
-    throw;
+    // throw;
   }
   // ReCombineADC(dirAnaPath.data(),fileName.data());
   system(Form("root -l -b -q ReCombineADC.C+\\(\\\"%s/\\\",\\\"%s\\\"\\)",dirAnaPath.data(),fileName.data()));
