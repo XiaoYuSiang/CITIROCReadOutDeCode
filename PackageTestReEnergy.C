@@ -182,7 +182,8 @@ void PackageTestReEnergy(
   
   Long64_t evs = t0->GetEntries();
   // TF1 *fGADCtoEdep = new TF1("fGADCtoEdep","log(1-x/5294.07)/(-0.0221)",0,11001);
-  TF1 *fGADCtoEdep = new TF1("fGADCtoEdep","log(1-x/5337.62)/(-0.0186)",0,11001);
+  //TF1 *fGADCtoEdep = new TF1("fGADCtoEdep","log(1-x/5337.62)/(-0.0186)",0,11001);
+TF1("fGADCtoEdep","(x-12.54)/105.19",0,11001);
   for(Long64_t iev=0;iev<evs*1.;iev++){
     t0->GetEntry(iev);
     if(iev%1000 == 0) 
